@@ -374,6 +374,9 @@ export const RichTextEditor: React.FC<RichTextEditorProps> = ({
 
           return true;
         },
+        drop(event) {
+          return (event.dataTransfer?.files.length ?? 0) > 0;
+        },
         keydown(_event, _view) {
           // Let all keys bubble naturally to document listeners
           // The keymap handler above will prevent vim from consuming arrow keys when pickers are open
