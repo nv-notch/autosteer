@@ -18,7 +18,7 @@ export const ModelSelector: React.FC<ModelSelectorProps> = ({
   className,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const currentModel = MODEL_OPTIONS.find((m) => m.value === model) || MODEL_OPTIONS[2]; // Default to Sonnet 4
+  const currentModel = MODEL_OPTIONS.find((m) => m.value === model) || MODEL_OPTIONS[0]; // Default to Sonnet 5.5
 
   const handleModelChange = (newModel: ModelOption) => {
     onChange(newModel);
